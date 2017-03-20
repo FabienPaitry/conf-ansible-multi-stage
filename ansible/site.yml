@@ -1,0 +1,5 @@
+---
+- name: variable precedence test
+  hosts: all
+  tasks:
+    - debug: var=env
