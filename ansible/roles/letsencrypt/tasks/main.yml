@@ -1,0 +1,16 @@
+---
+  - name: install letsencrypt
+    become: true
+    git:
+      repo: https://github.com/letsencrypt/letsencrypt
+      dest: /usr/local/letsencrypt
+
+  - name: create letsencrypt directory
+    file: name=/var/www/letsencrypt state=directory
+    become: true
+
+  - name: Create letsencrypt certificate
+    become: true
+    shell: /usr/local/letsencrypt/letsencrypt-auto certonly -n --webroot -w /usr/share/nginx/html -m {{ letsencrypt_email }} --agree-tos -d {{ domain_name }}
+    args:
+      creates: /etc/letsencrypt/live/{{ domain_name }}

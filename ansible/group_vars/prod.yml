@@ -1,2 +1,6 @@
 ---
 env: production
+ansible_user: ansible
+ansible_python_interpreter: /usr/bin/python3
+letsencrypt_email: 'fabien.paitry@gmail.com'
+domain_name: 'www.magicquotes.fr'

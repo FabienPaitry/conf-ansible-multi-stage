@@ -1,5 +1,11 @@
 ---
-- name: variable precedence test
+- name: All
   hosts: all
-  tasks:
-    - debug: var=env
+  roles:
+    - init
+    - nginx
+
+- name: Prod
+  hosts: prod
+  roles:
+    - letsencrypt
