@@ -1,0 +1,9 @@
+[dev]
+192.168.50.50 #vagrant local
+
+[prod]
+137.74.112.129 #ovh vps
+
+#prod.example.com
+#137.74.112.*
+#*.example.com

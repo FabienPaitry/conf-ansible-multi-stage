@@ -1,8 +1,4 @@
 ---
-  - name: Update pkg
-    become: true
-    apt:  update_cache=yes
-
   - name: Install system packages
     become: true
     apt:  pkg={{ item }} state=latest

@@ -1,11 +1,11 @@
 ---
-- name: All
+- name: All hosts
   hosts: all
   roles:
     - init
     - nginx
 
-- name: Prod
+- name: Prod hosts
   hosts: prod
   roles:
     - letsencrypt

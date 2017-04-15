@@ -1,11 +1,11 @@
 ---
-  - name: install letsencrypt
+  - name: Install letsencrypt
     become: true
     git:
       repo: https://github.com/letsencrypt/letsencrypt
       dest: /usr/local/letsencrypt
 
-  - name: create letsencrypt directory
+  - name: Create letsencrypt directory
     file: name=/var/www/letsencrypt state=directory
     become: true
 
