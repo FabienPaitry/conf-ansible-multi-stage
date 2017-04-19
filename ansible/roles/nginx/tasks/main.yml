@@ -1,11 +1,12 @@
 ---
   - name: Install nginx
     become: true
-    apt:  pkg=nginx state=latest
+    # become_user: someUser
+    apt:  pkg=nginx state=present
 
-  - name: Install nginx site for specified site
+  - name: Install nginx vhost for specified site
     become: true
     template:
       src: templates/default.j2
       dest: /etc/nginx/sites-enabled/default
-    notify: restart nginx
+    notify: reload nginx

@@ -1,4 +1,4 @@
 ---
 env: development
-ansible_user: vagrant
 domain_name: 'dev'
+ansible_user: vagrant

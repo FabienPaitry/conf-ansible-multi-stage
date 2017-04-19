@@ -1,11 +1,10 @@
 ---
-- name: All hosts
+- name: Nginx common
   hosts: all
   roles:
-    - init
     - nginx
 
-- name: Prod hosts
+- name: Deploy SSL certs
   hosts: prod
   roles:
     - letsencrypt
